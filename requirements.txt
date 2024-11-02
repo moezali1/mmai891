@@ -14,5 +14,5 @@ lxml_html_clean
 textblob
 transformers
 torch
+shap==0.45.0
 embedchain
-shap
