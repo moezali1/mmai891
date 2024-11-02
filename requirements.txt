@@ -15,4 +15,3 @@ textblob
 transformers
 torch
 shap==0.45.0
-embedchain
