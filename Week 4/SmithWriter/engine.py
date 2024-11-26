@@ -167,18 +167,5 @@ class BlogGenerator:
             return blog_content
 
         # Generate HTML output
-        html_output = convert_to_html(self.blog_content)
-
-        filename = re.sub(r"[^\w\s-]", "", self.blog_content["title"].lower())
-        filename = re.sub(r"[-\s]+", "_", filename)
-        filename = f"{filename}.html"
-
-        output_dir = os.path.join(os.getcwd(), "output")
-        os.makedirs(output_dir, exist_ok=True)  # Create output dir if it doesn't exist
-        filepath = os.path.join(output_dir, filename)
-
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(html_output)
-        print(f"File saved at: {filepath}")
-
+        self.html_output = convert_to_html(self.blog_content)
         return True
